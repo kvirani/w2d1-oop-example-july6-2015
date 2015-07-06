@@ -42,6 +42,6 @@ class Game
     puts "...."
   end
 
-  
+
 
 end
