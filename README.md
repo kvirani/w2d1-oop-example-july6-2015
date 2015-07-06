@@ -18,18 +18,18 @@ The player starts off with 0 points. If they hit -20 they DIE.
 
 Can allow you to inc / dec their score
 
-No UI Logic - interface with the user (I/O)
+No UI Logic - SHOULD NOT interface with the user (I/O)
 
 ### `Game` class:
 The interaction with the player along with the game logic / rules.
 Handling of multiple turns (endless looping)
 
-Has UI Logic - Can interface with the user (I/O)
+Has UI Logic - SHOULD interface with the user (I/O)
 
 ### `Turn` class:
 While the game starts each turn, the game logic within a turn is actually in this class.
 
-Has UI Logic - Can interface with the user (I/O)
+Has UI Logic - SHOULD interface with the user (I/O)
 
 ### `Question` class:
 Used to generate a "random" (not yet anyway) number and then tell us if the user's answer is correct or close
