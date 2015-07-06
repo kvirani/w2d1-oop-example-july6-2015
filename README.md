@@ -18,14 +18,18 @@ The player starts off with 0 points. If they hit -20 they DIE.
 
 Can allow you to inc / dec their score
 
+SHOULD NOT interface with the user (I/O) - UI
+
 `Game` class:
 The interaction with the player along with the game logic / rules.
 Handling of multiple turns (endless looping)
 
+Can interface with the user (I/O) - UI
+
 `Turn` class:
 While the game starts each turn, the game logic within a turn is actually in this class.
 
-
+Can interface with the user (I/O) - UI
 
 
 
