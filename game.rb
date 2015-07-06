@@ -1,5 +1,7 @@
-class Game
+require './player'
+require './turn'
 
+class Game
 
   def initialize
     # ???
@@ -10,36 +12,30 @@ class Game
     puts "WEEEEEE!!!"
     display_rules
 
-    points = 0
-
     print "Your Name: "
     player_name = gets.chomp
 
-    puts "Welcome: #{player_name}"
+    @player = Player.new(player_name)
+
+    puts "Welcome: #{@player.name}"
 
     while true
-      number = 7 # TODO: randomize
+      Turn.new(@player).play
 
-      print "Guess number: "
-      guess = gets.chomp.to_i
-
-      if guess == number
-        puts "WOW SMACK ON"
-        points += 5
-      elsif guess - 1 == number || guess + 1 == number
-        puts "VERY CLOSE!"
-        points += 3
-      else
-        puts "NOPE"
-        points -= 1
+      if dead?
+        puts "You lost!"
+        break
       end
-
 
     end
 
   end
 
   private 
+
+  def dead?
+    @player.score <= -2 
+  end
 
   def display_rules
     puts "Rules of the game follow:"

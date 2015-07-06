@@ -16,9 +16,14 @@ The player starts off with 0 points. If they hit -20 they DIE.
 * score = 0
 * turns_played
 
-`Game` class:
-The interaction with the user along with the game logic / rules.
+Can allow you to inc / dec their score
 
+`Game` class:
+The interaction with the player along with the game logic / rules.
+Handling of multiple turns (endless looping)
+
+`Turn` class:
+While the game starts each turn, the game logic within a turn is actually in this class.
 
 
 
